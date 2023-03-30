@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<TITLE>House Payment Countdown</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+  <p style="font-size: 48px; text-align: center;">Ha ha ha! It is mine, <br/>
+    <!-- params for any SPAN or DIV id="percentout"
+
+	 data-totalcost: the total purchase price of the property
+	 data-prepaydate: a date before the first payment goes in, maybe closing date
+	 data-firstpayment: when the first regular payment happens, monthly thereafter
+	 data-earlyprincipal: how much you've paid early
+	 data-interest: interest as a fraction of 1; e.g. 4.5% => 0.045
+	 data-years: term of mortgage, 12 monthly payments per year
+	 data-principal: how much the loan was for (e.g. minus the down payment)
+	 data-settitle: set document.title to % ticker
+-->
+    <span id="percentout" style="font-size: 140px; font-family: monospace;"
+	  data-totalcost="500000"
+	  data-prepaydate="2015-03-01T12:00:00-04:00"
+	  data-firstpayment="2015-04-01T12:00:00-04:00"
+	  data-earlyprincipal="0.0"
+	  data-interest="0.045"
+	  data-years="30"
+	  data-principal="400000"
+	  data-settitle="true"></span>
+    <br/>mine!</p>
+  <div id="bottombox" style="position:fixed;width:100%;top:auto;bottom:0;left:0;right:0;">
+
+    <!-- optional "details" box, could be P or DIV -->
+    <p style="text-align: center; font-family: monospace;" id="details"></p>
+
+    <!-- static explanation note -->
+    <p style="text-align: center;">(Interpolated between mortgage payments, this should count up to 100% at the moment the last payment goes in.)</p>
+    
+  </div>
+<script src="ownpct.js">
+</script>
+</BODY>
+
+</HTML>
